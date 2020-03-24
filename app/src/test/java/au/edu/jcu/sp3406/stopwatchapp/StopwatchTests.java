@@ -14,7 +14,7 @@ public class StopwatchTests {
     public void testConstructor()
     {
         Stopwatch stopwatch = new Stopwatch();
-        assertEquals("00:00:00", stopwatch.toString();
+        assertEquals("00:00:00", stopwatch.toString());
     }
     @Test
     public void testTicker() {
@@ -28,6 +28,6 @@ public class StopwatchTests {
         for (int i = 0; i< 59*60; ++i) {
             stopwatch.tick();
         }
-        assertEquals("00:01:00", stopwatch.toString());
+        assertEquals("01:00:00", stopwatch.toString());
     }
 }

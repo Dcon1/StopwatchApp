@@ -1,18 +1,19 @@
 package au.edu.jcu.sp3406.stopwatchapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.TextView;
 
 public class StopwatchActivity extends AppCompatActivity {
+    Stopwatch stopwatch;
+    Boolean isRunning;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        stopwatch Stopwatch = new Stopwatch();
+        Stopwatch stopwatch = new Stopwatch();
     }
 
     public void enableStopwatch() {
@@ -31,6 +32,8 @@ public class StopwatchActivity extends AppCompatActivity {
         });
     }
 
-private void disableStopwatch() {
-    isRunning = false;
+
+    private void disableStopwatch() {
+        isRunning = false;
+    }
 }

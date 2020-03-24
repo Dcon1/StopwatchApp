@@ -4,19 +4,17 @@ import java.util.Locale;
 
 public class Stopwatch {
     private int seconds = 0;
-    private int hours = seconds / 3600;
-    private int minutes = (seconds%3600)/60;
-    private int secs = seconds%60;
+    private int hours;
+    private int minutes;
 
-    public String tick(){
-        String time = String.format(Locale.getDefault(), "%d:%02d;%02d", hours, minutes, secs);
+    public void tick(){
         seconds++;
-        return time;
-
+        hours = seconds / 3600;
+        minutes = (seconds%3600)/59;
     }
 
     public String toString(){
-        return tick().toString();
+        return String.format(Locale.getDefault(), "%02d:%02d:%02d", hours, minutes, seconds%60);
 
     }
 
