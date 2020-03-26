@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:context=".StopwatchActivity"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
@@ -14,18 +15,20 @@
         android:text="00:00:00"
         android:textAlignment="center"
         android:textSize="100sp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/toggle"
-        android:onClick="buttonClicked"
-        android:layout_gravity="center"
-        android:text="start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <Button
+            style="@style/Widget.AppCompat.Button"
+            android:id="@+id/toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="buttonClicked"
+            android:text="@string/start"
+            android:textSize="100sp"
+            />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
