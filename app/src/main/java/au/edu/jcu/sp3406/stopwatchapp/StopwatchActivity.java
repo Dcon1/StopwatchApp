@@ -3,6 +3,7 @@ package au.edu.jcu.sp3406.stopwatchapp;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.widget.TextView;
 
 public class StopwatchActivity extends AppCompatActivity {
@@ -17,7 +18,7 @@ public class StopwatchActivity extends AppCompatActivity {
     }
 
     public void enableStopwatch() {
-        final boolean isRunning = true;
+        final boolean isRunning = false;
         final Handler handler = new Handler();
         handler.post(new Runnable() {
             @Override
@@ -31,9 +32,7 @@ public class StopwatchActivity extends AppCompatActivity {
             }
         });
     }
-
-
-    private void disableStopwatch() {
-        isRunning = false;
+    public void buttonClicked(View view){
+        isRunning = true;
     }
 }

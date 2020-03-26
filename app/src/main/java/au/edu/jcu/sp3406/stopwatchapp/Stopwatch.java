@@ -3,7 +3,7 @@ package au.edu.jcu.sp3406.stopwatchapp;
 import java.util.Locale;
 
 public class Stopwatch {
-    private int seconds = 0;
+    private int seconds = 1;
     private int hours;
     private int minutes;
 
