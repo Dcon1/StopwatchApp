@@ -14,12 +14,11 @@ public class StopwatchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Stopwatch stopwatch = new Stopwatch();
     }
 
     public void enableStopwatch() {
-        final boolean isRunning = false;
-        final Handler handler = new Handler();
+        boolean isRunning = false;
+        Handler handler = new Handler();
         handler.post(new Runnable() {
             @Override
             public void run() {
@@ -32,7 +31,8 @@ public class StopwatchActivity extends AppCompatActivity {
             }
         });
     }
-    public void buttonClicked(View view){
+
+    public void buttonClicked(View view) {
         isRunning = true;
     }
 }
