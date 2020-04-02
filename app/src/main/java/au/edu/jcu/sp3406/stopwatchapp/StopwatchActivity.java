@@ -8,7 +8,8 @@ import android.widget.TextView;
 
 public class StopwatchActivity extends AppCompatActivity {
     Stopwatch stopwatch;
-    Boolean isRunning;
+    boolean isRunning = false;
+    Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +18,8 @@ public class StopwatchActivity extends AppCompatActivity {
     }
 
     public void enableStopwatch() {
-        boolean isRunning = false;
-        Handler handler = new Handler();
+
+
         handler.post(new Runnable() {
             @Override
             public void run() {
