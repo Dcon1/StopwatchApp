@@ -7,19 +7,18 @@ import android.view.View;
 import android.widget.TextView;
 
 public class StopwatchActivity extends AppCompatActivity {
-    Stopwatch stopwatch;
-    boolean isRunning = false;
+    Stopwatch stopwatch = new Stopwatch();
+    boolean isRunning;
     Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        isRunning = true;
     }
 
     public void enableStopwatch() {
-
-
         handler.post(new Runnable() {
             @Override
             public void run() {
@@ -34,6 +33,6 @@ public class StopwatchActivity extends AppCompatActivity {
     }
 
     public void buttonClicked(View view) {
-        isRunning = true;
+        enableStopwatch();
     }
 }
